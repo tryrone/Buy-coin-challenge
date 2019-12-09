@@ -1,0 +1,178 @@
+div.wrapper {
+  /* margin: auto; */
+  /* height: 522px;
+  width: 845px;
+  margin-top: 6rem;
+  border-radius: 4px; */
+}
+
+/* div.wrapper > table {
+  margin: auto;
+  box-shadow: 1px 5px 10px #b3b0b0;
+  margin-top: 7rem;
+} */
+/* 
+th > span {
+  margin-right: 6px;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+tr:nth-child(odd) {
+  background: rgb(236, 236, 236);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 10px 40px;
+}
+
+tr.right {
+  background: #fff;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+th.lo {
+  padding: 0 10px;
+  text-align: left;
+}
+
+td.lo {
+  padding: 0 10px;
+  padding-right: 65px;
+  text-align: left;
+}
+
+button.next,
+button.prev {
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  background: #d9d9d9;
+}
+
+button.next {
+  margin-left: 645px;
+} */
+
+table {
+  width: 750px;
+  border-collapse: collapse;
+  border-radius: 4px;
+  box-shadow: 1px 5px 10px #b3b0b0;
+  margin: 50px auto;
+}
+
+/* Zebra striping */
+tr:nth-child(even) {
+  background: #eee;
+}
+tr:nth-child(odd) {
+  background: #d9d9d9;
+}
+tr.right {
+  background: #eee;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+th {
+  color: black;
+  font-weight: bold;
+}
+
+button.next,
+button.prev {
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  background: #d9d9d9;
+  font-weight: bold;
+}
+
+button.next {
+  position: relative;
+  left: 600px;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+span.hide {
+  display: none;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  span.hide {
+    display: block;
+  }
+
+  p.desc {
+    font-weight: bold;
+    display: inline-block;
+  }
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  tr > td {
+    flex: 0 40%;
+    box-sizing: border-box;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+
+    /* padding-left: 50%; */
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+}
